@@ -8,4 +8,3 @@ module.exports = {
       '**/?(*.)+(spec|test).js', // Sucht nach Testdateien im Format .test.js oder .spec.js
     ],
   };
-  
