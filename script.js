@@ -1,10 +1,12 @@
 //#1
+//turns the first string-index to uppercase
 function stringToUppercase(string) {
   let firstLetter = string[0].toUpperCase();
   return firstLetter + string.slice(1);
 }
 
 //#2
+//reverses the string
 function stringReversed(string) {
   let revertedString = "";
   for (let i = 0; i < string.length; i++) {
@@ -15,6 +17,7 @@ function stringReversed(string) {
 }
 
 //#3
+//simple calculator object
 const calculator = {
   add(a, b) {
     const result = a + b;
@@ -38,6 +41,7 @@ const calculator = {
 };
 
 //#4
+//takes a string and uses caesar's famous cipher
 function caesarCipher(string, shiftFactor) {
   let newString = "";
   for (let i = 0; i < string.length; i++) {
@@ -73,15 +77,15 @@ function adjustCharacterPosition(num, shiftFactor) {
 }
 
 //#5
-
-let arr = [1, 2, 3, 4, 5, 54, 99, 44];
+//object that takes an array and checks it's average, minimum, maxinum and length
+let arr = [1,8,3,4,2,6];
 
 function analyzeArray(arr) {
   const object = {
     average: 0,
     min: 0,
     max: 0,
-    length: 0,
+    length: arr.length,
   };
 
   object.max = arr.reduce((acc, current) => {
@@ -94,11 +98,10 @@ function analyzeArray(arr) {
     return lil;
   });
 
-  object.length = Object.keys(object).length;
-
   object.average = arr.reduce((arr, current) => {
-    return Math.floor((arr + current)/object.length);
-  })
+    let sum = arr + current;
+    return sum;
+  },0)/object.length;
   return object;
 }
 
